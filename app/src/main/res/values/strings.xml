@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Prueba</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_edit_text">Escribe aquí...</string>
+    <string name="send">Enviar</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="edit_text_empty">El campo no puede estar vacío</string>
+</resources>

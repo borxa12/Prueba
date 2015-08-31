@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="#dddddd"
+    android:orientation="vertical">
+    <!-- El background le puedes pasar un color asi en hexadecimal o llamando al archivo
+    colors: @color/grey  tambien le puedes poner una imagen @drawable/foto que tiene que
+    estar en alguna de las carpetas de drawables del proyecto y en este caso el nombre del
+    archivo tendria que ser foto
+    Cuando es un LinearLayout es "obligatorio" ponerle la orientacion, si quieres que sea
+    vertical o horizontal, es decir que los elemenos se pongan uno debajo de otro, o unos a
+    la derecha del otro-->
+
+
+    <!-- El hint en una caje de texto es el texto de ayuda que pone antes de
+    empezar a escribir, cuando es cualquier cosa de texto puedes escribir a "pelo" el texto
+    entre las comillas, pero es recomendable que lo pongas en el fichero strings para una
+    posible y futura internacionalizacion, es decir, para tener una app en varios idiomas
+    se replica el archivo strings y se traduce exactamente las cadenas manteniendo los id-->
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/hint_edit_text"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <!-- Ejemplo de text sin usar archivo strings -->
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Enviar"/>
+
+        <!-- Te preguntaras por que hago un boton con un linearLayout con un texto dentro,
+         si existe la clase Button. Pues es porque con un LinearLayout es mucho mas facil
+         darle estilo y poder modificarlo a tu manera que un button, luego a la hora de
+         su funcionalidad hacen lo mismo -->
+        <LinearLayout
+            android:id="@+id/view_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/purple">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/send"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
